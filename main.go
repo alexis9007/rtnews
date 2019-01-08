@@ -12,6 +12,7 @@ func main() {
 	r.POST("/register", controllers.RegisterController)
 	r.POST("/login", controllers.LoginController)
 	r.POST("/cancel", nil)
+	r.GET("/news", controllers.NewsListController)
 	r.GET("/news/:newsId", nil)
 	r.Run(":8080")
 }

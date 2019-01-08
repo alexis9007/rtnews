@@ -10,7 +10,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// 插入类型的业务逻辑
+// 第一步接受用户的数据（Controller部分）
+// 构造一个与数据一致的对象来接受数据 json.Unmarshall（Controller部分）
+// 第二步将对象转化成一个SQL语句 (Service部分)
+// 连接数据库获得*DB对象，然后拼接SQL
+// 直接拼接SQL:fmt.SPrintf("INSERT INTO user VALUES(%s,%s,%s)",对象属性1，对象属性2，对象属性3)
+// 通过db.Exec(SQL语句)完成插入数据的功能
 // UserRequest 代表用户请求
+
+// 发布一条消息 发布一条新闻 注册一个用户 都属于插入类型
 type UserRequest struct {
 	Username string
 	Password string

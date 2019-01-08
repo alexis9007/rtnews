@@ -6,3 +6,7 @@ POST http://localhost:8080/login
     "password":"admin"
 }
 
+
+### News List
+//date=2018-08-18 => SQL  where date = `2018-08-18` 
+GET http://localhost:8080/news?author=hoobean&date=2018-08-18
