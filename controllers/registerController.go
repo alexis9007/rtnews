@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//https://github.com/alexis9007/rtnews
 // 插入类型的业务逻辑
 // 第一步接受用户的数据（Controller部分）
 // 构造一个与数据一致的对象来接受数据 json.Unmarshall（Controller部分）
