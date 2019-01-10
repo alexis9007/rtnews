@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"testing"
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -26,6 +27,7 @@ func insertIntoAnyTable(tb, un, pw string) string {
 }
 
 func TestInsert(t *testing.T) {
+	t.Log(time.Now().String())
 	db, err := sql.Open("mysql", "root:@/rtnews")
 	if err != nil {
 		panic(err)

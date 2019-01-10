@@ -3,10 +3,9 @@ package services
 import (
 	"database/sql"
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"rtnews/models"
-
-	_ "github.com/go-sql-driver/mysql"
 )
 
 func UserListService(wheres string) ([]models.User, error) {

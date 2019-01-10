@@ -29,7 +29,9 @@ func NewsUpdateController(ctx *gin.Context) {
 		})
 		return
 	}
-	upd := &NewsUpdate{}
+	upd := &NewsUpdate{
+		PublishedAt: time.Now(),
+	}
 	err = json.Unmarshal(data, upd)
 	if err != nil {
 		log.Println("json Unmarshal fatal error ", err)

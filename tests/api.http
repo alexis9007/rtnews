@@ -22,6 +22,5 @@ POST http://localhost:8080/newsUpdate
 {
     "Title": "震惊！大事件",
     "Content": "房价暴跌",
-    "PublishedAt":"2006-01-02T15:04:05Z07:00",
     "Author":"syq"
 }

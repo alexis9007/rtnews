@@ -19,7 +19,7 @@ func NewsListService(wheres string) ([]models.News, error) {
 	log.Println("executed sql statement is ", stmt)
 	rows, err := db.Query(stmt)
 	if err != nil {
-		log.Println("QUERY from news list fatal error %v", err)
+		log.Printf("QUERY from news list fatal error %v", err)
 		return []models.News{}, err
 	}
 	//result := []models.User{}
