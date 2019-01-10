@@ -15,5 +15,6 @@ func main() {
 	r.GET("/news", controllers.NewsListController)
 	r.GET("/news/:newsId", nil)
 	r.GET("/user", controllers.UserListController)
+	r.POST("/newsUpdate", controllers.NewsUpdateController)
 	r.Run(":8080")
 }

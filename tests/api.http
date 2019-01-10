@@ -10,3 +10,18 @@ POST http://localhost:8080/login
 ### News List
 //date=2018-08-18 => SQL  where date = `2018-08-18` 
 GET http://localhost:8080/news?author=hoobean&date=2018-08-18
+
+
+### user List
+GET  http://localhost:8080/user?username=syq
+
+### NewsUpdate 
+POST http://localhost:8080/newsUpdate
+
+
+{
+    "Title": "震惊！大事件",
+    "Content": "房价暴跌",
+    "PublishedAt":"2006-01-02T15:04:05Z07:00",
+    "Author":"syq"
+}
