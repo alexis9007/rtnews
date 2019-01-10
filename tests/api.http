@@ -20,7 +20,7 @@ POST http://localhost:8080/newsUpdate
 
 
 {
-    "Title": "震惊！大事件",
-    "Content": "房价暴跌",
+    "Title": "Boom",
+    "Content": "House Price fAILS down",
     "Author":"syq"
 }

@@ -16,7 +16,7 @@ func NewsUpdateService(title string, content string, publishedAt time.Time, auth
 		log.Println("call sqlOpen fatal error ", err)
 		return false, err
 	}
-	stmt := fmt.Sprintf("INSER INTO news VALUES (3,'%s','%s','2019-01-10 16:29:27','%s')", title, content, author)
+	stmt := fmt.Sprintf(`INSER INTO news(title,content,author) VALUES('%s','%s','%s')`, title, content, author)
 	log.Println("execute sql statement ", stmt)
 	_, err = db.Exec(stmt)
 	if err != nil {
