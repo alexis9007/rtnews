@@ -3,6 +3,7 @@ package services
 import (
 	"database/sql"
 	"log"
+	"rtnews/models"
 )
 
 func RetriveCommentService(where string) ([]models.Comment, error) {
@@ -12,7 +13,7 @@ func RetriveCommentService(where string) ([]models.Comment, error) {
 		log.Print("sql open fatal error ", err)
 		return []models.Comment{}, err
 	}
-	stmt := "SELECT content, athuorId, newsId FROM comment WHERE " + where
+	stmt := "SELECT content, authorId, newsId FROM comment WHERE " + where
 	log.Print("execute sql statement ", stmt)
 	rows, err := db.Query(stmt)
 	if err != nil {
