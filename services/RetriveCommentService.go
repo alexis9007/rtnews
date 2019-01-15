@@ -3,7 +3,6 @@ package services
 import (
 	"database/sql"
 	"log"
-	"rtnews/models"
 )
 
 func RetriveCommentService(where string) ([]models.Comment, error) {
