@@ -24,3 +24,16 @@ POST http://localhost:8080/newsUpdate
     "Content": "House Price fAILS down",
     "Author":"syq"
 }
+
+### RetriveComment
+GET  http://localhost:8080/retriveComment?newsId=1321
+
+### CommentUpdate
+
+POST http://localhost:8080/commentUpdate
+
+{
+    "Content": "nice",
+    "AuthorId": 123456,
+    "NewsId": 1321
+}

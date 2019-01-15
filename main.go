@@ -13,8 +13,9 @@ func main() {
 	r.POST("/login", controllers.LoginController)
 	r.POST("/cancel", nil)
 	r.GET("/news", controllers.NewsListController)
-	r.GET("/news/:newsId", nil)
 	r.GET("/user", controllers.UserListController)
 	r.POST("/newsUpdate", controllers.NewsUpdateController)
+	r.GET("/retriveComment", controllers.RetriveCommentController)
+	r.POST("/commentUpdate", controllers.CommentUpdateController)
 	r.Run(":8080")
 }
